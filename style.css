@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: linear-gradient(90deg, #ae6bde 0%, #515ada 100%);
+    font-family: 'poppins';
+
+
+
+
+}
+
+
+header {
+
+    font-size: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+
+.board {
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    height: max-content;
+    display: grid;
+   /*margin-top: 10%;*/
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 4px;
+    padding: 30px;
+    /*background-image: url("ht?tps://rasbula.com/agency/img/blog-news-2.jpg");*/
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+
+
+}
+
+
+
+.card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+}
+
+.winning-cell {
+    color: red;
+    animation: blink 2s 1;
+}
+@keyframes blink {
+    10%{
+        scale: 0.5;
+        border: 2px solid red;
+    }
+    20%{
+        scale: 0.7;
+        border: 2px solid red;
+    }
+    30%{
+        scale: 1;
+        border: 2px solid red;
+
+    }
+    40%{
+        scale: 1.3;
+        border: 2px solid red;
+
+    }
+    50%{
+        scale: 0.7;
+
+        border: 2px solid red;
+
+    }
+    60%{
+        scale: 1;
+    }
+    75%{
+        scale: 1.5;
+        border: 2px solid red;
+
+}
+    85%{
+        scale: 1.1;
+        border: 2px solid red;
+
+    }
+100%{
+    scale: 1.8;
+    border: 2px solid red;
+
+}
+}
+
+
+.cell{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: 0.4s;
+}
+.turn{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: 0.4s;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 45px;
+    width: max-content;
+    height: max-content;
+    padding: 9px;
+    margin-top: 21px;
+    margin-bottom: 12px;
+}
+
+.action{
+
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    width: max-content;
+    height: max-content;
+    /*padding: 5px;*/
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bolder;
+    font-size: 50px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: 0.4s;
+    min-width: 150px;
+}
+
+
+/*.cell:hover{*/
+/*    scale: 0.6;*/
+/*    font-size: 23px;*/
+
+/*}*/
