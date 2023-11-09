@@ -34,7 +34,7 @@ let clear = () =>{
 }
 
 let turn =  document.getElementsByClassName("turn")[0];
-let move = "❌";
+let move = "✖️";
 turn.innerText = `${move}'s move`
 let a =  document.getElementsByClassName("action")[0];
 
@@ -93,7 +93,7 @@ cells.forEach((cell, index) => {
                 }, 1500);
                 gameWon = false; // Reset the game state
             } else {
-                move = move === "❌" ? "⚫" : "❌";
+                move = move === "✖️" ? "⭕️" : "✖️";
             }
             turn.innerText = `${move}'s move`
         }
