@@ -130,7 +130,7 @@ header {
     height: max-content;
     display: grid;
    /*margin-top: 10%;*/
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(3,120px);
     /*grid-gap: 4px;*/
     grid-column-gap: 4px;
     padding: 30px;
@@ -202,8 +202,8 @@ header {
 
 
 .cell{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     cursor: pointer;
     text-align: center;
     font-size: 50px;
