@@ -25,16 +25,19 @@ function checkTie() {
 }
 
 let cells = document.querySelectorAll(".cell");
-let action = document.getElementsByClassName("action")[0];
+let action1 = document.getElementsByClassName("action-container")[0];
+
 let clear = () =>{
     board = ["", "", "", "", "", "", "" ,"", ""];
     cells.forEach((ele) =>{
         ele.innerText = "";
+        a.style.color = "green";
     })
 }
 
 let turn =  document.getElementsByClassName("turn")[0];
-let move = "✖️";
+let btn =  document.getElementsByClassName("btn")[0];
+let move = "❌";
 turn.innerText = `${move}'s move`
 let a =  document.getElementsByClassName("action")[0];
 
@@ -75,7 +78,7 @@ cells.forEach((cell, index) => {
                 setTimeout(() => {
 
                     clear();
-                    action.style.display = "block";
+                    action1.style.display = "block";
                     // Remove the winning-cell class from all cells
                     cells.forEach(cell => cell.classList.remove("winning-cell"));
                     gameWon = false; // Reset the game state
@@ -83,17 +86,19 @@ cells.forEach((cell, index) => {
             } else if (checkTie()) {
                 gameWon = true; // Set the game as won
                 a.innerText = "Tie";
+                a.style.color = "black";
                 setTimeout(() => {
 
                     clear();
-                    action.style.display = "block";
+                    action1.style.display = "block";
+
                     // Remove the winning-cell class from all cells
                     cells.forEach(cell => cell.classList.remove("winning-cell"));
                     gameWon = false; // Reset the game state
                 }, 1500);
                 gameWon = false; // Reset the game state
             } else {
-                move = move === "✖️" ? "⭕️" : "✖️";
+                move = move === "❌" ? "⚫" : "❌";
             }
             turn.innerText = `${move}'s move`
         }
@@ -102,5 +107,10 @@ cells.forEach((cell, index) => {
 
 let bd = document.getElementsByTagName("body")[0];
 bd.addEventListener("click", ()=>{
-    action.style.display = "none";
+    action1.style.display = "none";
+})
+
+btn.addEventListener("click", ()=>{
+    action1.style.display = "none";
+
 })
